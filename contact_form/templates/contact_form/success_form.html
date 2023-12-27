@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="text-center">
+        <h4 class="text-success">
+            Ваше сообщение отправлено успешно.
+        </h4>
+        <h6>
+            Ожидайте ответа оператора, с вами обязательно свяжутся
+        </h6>
+        <a href="/animals">
+            <button class="btn btn-primary">
+                На главную страницу
+            </button>
+        </a>
+        <br/>
+        <a href="/contact_form">
+            <button class="mt-1 btn btn-light border border-1 border-primary">
+                Написать еще
+            </button>
+        </a>
+    </div>
+
+{% endblock %}
