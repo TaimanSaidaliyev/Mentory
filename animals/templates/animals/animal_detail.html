@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="text-end">
+        <a class="btn btn-secondary" href="/animals" >Назад</a>
+    </div>
+
+    <div class="row">
+
+        <div style="width: 310px">
+            <img src="/media/{{ animal.photo }}" style="width: 300px" class="rounded-5"/>
+        </div>
+        <div class="col">
+            <h3>
+                {{ animal.title }}
+            </h3>
+            <h6>Класс животных:
+                <span class="text-danger">{{ animal.animal_type }}</span>
+            </h6>
+            <span>
+                {{ animal.description }}
+            </span>
+        </div>
+    </div>
+
+{% endblock %}
