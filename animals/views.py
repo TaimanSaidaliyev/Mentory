@@ -45,3 +45,12 @@ def add_animal_type(request):
         'form': form
     }
     return render(request, template, context)
+
+
+def animal_detail(request, breed_id):
+    template = 'animals/animal_detail.html'
+    animal = Breeds.objects.get(pk=breed_id)
+    context = {
+        'animal': animal
+    }
+    return render(request, template, context)
